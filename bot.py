@@ -60,7 +60,7 @@ def main():
     maximize_chrome()
     while True:
         clear_mouse()
-        pick_up_location = find_element(PICKUP_IMAGE)
+        pick_up_location = find_element(PICKUP_IMAGE, countLimit=5)
         if not pick_up_location:
             time.sleep(refreshTime)
             refresh_page()
